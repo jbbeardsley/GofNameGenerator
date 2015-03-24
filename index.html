@@ -8,22 +8,23 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 </head>
 
-<body ng-app="gofNameGeneratorApp">
+<body ng-app="GofNameGeneratorApp">
 	<h1>GoF Name Generator</h1>
-	<div class="container-fluid" ng-controller="gofNameGeneratorController">
-		<p>Model Name: <input type="text" ng-model="modelName"></p>
+	<div class="container-fluid" ng-controller="GofNameGeneratorController as generator">
+		<p>Model Name: <input type="text" ng-model="generator.name"></p>
 
-		<p>Model Action: <input type="text" ng-model="modelAction"></p>
+		<p>Model Action: <input type="text" ng-model="generator.action"></p>
 
-		<button ng-click="generate()">Click me!</button>
+		<button ng-click="generator.generate()">Click me!</button>
 
 		<ul>
-			<li ng-repeat="generatedName in generatedNameList track by $index">
+			<li ng-repeat="generatedName in generator.generatedNameList track by $index">
 				{{generatedName}}
 			</li>
 		</ul>
 	</div>
-	<script type="text/javascript" src="assets/scripts/gofPatterns.js"></script>
-	<script type="text/javascript" src="assets/scripts/gofNameGenerator.js"></script>
+	<script type="text/javascript" src="assets/scripts/GofPatterns.js"></script>
+	<script type="text/javascript" src="assets/scripts/GofNameGeneratorService.js"></script>
+	<script type="text/javascript" src="assets/scripts/GofNameGeneratorController.js"></script>
 </body>
 </html>
