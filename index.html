@@ -2,12 +2,15 @@
 <html>
 
 <head>
+	<title>GoF Name Generator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/assets/styles/bootstrap.min.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 </head>
 
-<body>
-
-	<div ng-app="gofNameGeneratorApp" ng-controller="gofNameGeneratorController">
+<body ng-app="gofNameGeneratorApp">
+	<h1>GoF Name Generator</h1>
+	<div class="container-fluid" ng-controller="gofNameGeneratorController">
 		<p>Model Name: <input type="text" ng-model="modelName"></p>
 
 		<p>Model Action: <input type="text" ng-model="modelAction"></p>
@@ -20,7 +23,7 @@
 			</li>
 		</ul>
 	</div>
-	<script type="text/javascript" src="gofPatterns.js"></script>
-	<script type="text/javascript" src="gofNameGenerator.js"></script>
+	<script type="text/javascript" src="/assets/scripts/gofPatterns.js"></script>
+	<script type="text/javascript" src="/assets/scripts/gofNameGenerator.js"></script>
 </body>
 </html>
